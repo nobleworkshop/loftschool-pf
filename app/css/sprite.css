@@ -1,0 +1,89 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` ../img/sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` ../img/sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-contact-mail {
+  background-image: url(../img/sprite.png);
+  background-position: -41px -94px;
+  width: 21px;
+  height: 16px;
+}
+.icon-contact-phone {
+  background-image: url(../img/sprite.png);
+  background-position: -94px -66px;
+  width: 19px;
+  height: 20px;
+}
+.icon-contact-skype {
+  background-image: url(../img/sprite.png);
+  background-position: -130px -96px;
+  width: 20px;
+  height: 20px;
+}
+.icon-course {
+  background-image: url(../img/sprite.png);
+  background-position: -130px 0px;
+  width: 26px;
+  height: 32px;
+}
+.icon-image {
+  background-image: url(../img/sprite.png);
+  background-position: -94px -34px;
+  width: 32px;
+  height: 32px;
+}
+.icon-login-lock {
+  background-image: url(../img/sprite.png);
+  background-position: -130px -64px;
+  width: 20px;
+  height: 32px;
+}
+.icon-login-unlock {
+  background-image: url(../img/sprite.png);
+  background-position: -130px -32px;
+  width: 20px;
+  height: 32px;
+}
+.icon-social-fb {
+  background-image: url(../img/sprite.png);
+  background-position: -47px 0px;
+  width: 47px;
+  height: 47px;
+}
+.icon-social-git {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -47px;
+  width: 47px;
+  height: 47px;
+}
+.icon-social-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -47px -47px;
+  width: 47px;
+  height: 47px;
+}
+.icon-social-vk {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 47px;
+  height: 47px;
+}
+.icon-study {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -94px;
+  width: 41px;
+  height: 23px;
+}
+.icon-work {
+  background-image: url(../img/sprite.png);
+  background-position: -94px 0px;
+  width: 36px;
+  height: 34px;
+}
