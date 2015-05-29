@@ -33,10 +33,11 @@ ul{
 
 body{
 	background-image: url('../img/bg.png');
+	font-family: 'Fira Sans', sans-serif;
 }
 
 
-.wrapper{
+.page-wrapper{
 	width: 960px;
 	margin: auto;
 	padding-top: 40px;
@@ -46,6 +47,7 @@ body{
 
 .page-header{
 	background-color: $bg-color;
+	margin-bottom: 25px;
 
 	.logo{
 		padding: 35px 100px;
@@ -58,14 +60,9 @@ body{
 
 		&-item{
 			display: inline-block;
-			a{
+			&-link{
 				display: block;
-				&:hover:after{
-					display: block;
-					width: 47px;
-					height: 47px;
-					background-color: rgba(255,255,255,0.5);
-				}
+				text-indent: -9999px;
 			}
 		}
 	}
@@ -78,19 +75,18 @@ body{
 		background-size: 100%;
 	}
 }
-.page-block{
-	background-color: $bg-color;
-	margin-top: 25px;
-	border-radius: 3px;
-}
 
-.main-menu, .contact{
-	margin-right: auto;
-	width: 250px;
+
+.main-sidebar{
+	float: left;
 }
 .main-menu{
+	background-color: $bg-color;
+	margin-bottom: 25px;
+	overflow: hidden;
+	border-radius: 3px;
 
-	.menu-item a{
+	.menu-link{
 		display: block;
 		text-decoration: none;
 		color: $text-color*2;
@@ -118,7 +114,10 @@ body{
 
 .contact{
 	color: #fff;
-	
+	margin-bottom: 25px;
+	overflow: hidden;
+	border-radius: 3px;
+
 	.title{
 		background-color: $general-color;
 		padding: 15px 25px;
@@ -131,7 +130,7 @@ body{
 			display: inline-block;
 			margin-left: 35px;
 		}
-		a{
+		.contact-link{
 			vertical-align: middle;
 			margin-left: 20px;
 			color: #fff;
@@ -149,7 +148,11 @@ body{
 	}
 
 }
-.info, .work, .education{
+.info-block{
+	background-color: $bg-color;
+	margin-bottom: 25px;
+	border-radius: 3px;
+	overflow: hidden;
 	width: 650px;
 	float: right;
 
@@ -162,8 +165,9 @@ body{
 		margin-bottom: 25px;
 	}
 }
-.info{
-	.photo{
+.general{
+	.photo-box{
+		overflow: hidden;
 		float: left;
 		width: 140px;
 		height: 140px;
@@ -173,6 +177,41 @@ body{
 		margin-right: 20px;
 		margin-bottom: 65px;
 	}
+	.photo{
+		position: relative;
+		left: -60px;
+	}
+	.about-me{
+		&-item{
+			display: table;
+			border-spacing: 5px;
+		}
+		&-field{
+			display: table-cell;
+			font-weight: bold;
+			margin-right: 10px;
+			white-space:nowrap;
+		}
+		&-value{
+			display: table-cell;
+		}
+	}
+
+	.skills{
+		&-item{
+			display: inline-block;
+			border-radius: 3px;
+			color: #fff;
+			background-color: $general-color;
+			background: linear-gradient(to top, $general-color*0.7 50%, $general-color 50%);
+			padding: 5px 15px;
+			margin-right: 5px;
+			margin-bottom: 10px;
+			font-size: 14px;
+			font-family: 'Proxima-Nova', serif;
+			font-weight: 700;
+		}
+	}
 }
 
 .work{
@@ -180,6 +219,11 @@ body{
 .education{
 }
 
+.footer-wrapper{
+	width: 960px;
+	margin: auto;
+	@include clearfix;
+}
 .page-footer{
 	background-color: $bg-color;
 	height: 80px;
@@ -188,15 +232,12 @@ body{
 		float: left;
 		border: none;
 		background-color: transparent;
-		margin: 25px 30px;
+		text-indent: -9999px;
 	}
 	.copyright{
 		text-align: center;
 		margin-top: 30px;
-		margin-bottom: 30px;
 	}
-
-	@include clearfix;
 	&:before{
 		height: 3px;
 		background-image: url('../img/line.jpg');

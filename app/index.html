@@ -1,89 +1,144 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="no-js">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
 	<title>Ivanov Alexander - Portfolio page</title>
+	<!-- <script src="bower_components/modernizr/modernizr.js"> -->
 	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
-	<link rel="stylesheet" href="bower_components/html5shiv/dist/html5shiv.js">
+	<link rel="stylesheet" href="font/fira/fira.css">
+	<link rel="stylesheet" href="font/Proxima-Nova/font.css">
 	<link rel="stylesheet" href="css/main.css">	
 	<link rel="stylesheet" href="css/sprite.css">
 </head>
 <body>
-	<header class="page-header">
-		<img src="img/logo.png" alt="Loftscool - от мыслителя к создателю" class="logo">
-		<ul class="social">
-			<li class="social-item"><a href="" class="icon-social-vk"></a></li>
-			<li class="social-item"><a href="" class="icon-social-tw"></a></li>
-			<li class="social-item"><a href="" class="icon-social-fb"></a></li>
-			<li class="social-item"><a href="" class="icon-social-git"></a></li>
-		</ul>
-	</header>
-	<div class="wrapper">
-		<div class="info page-block">
-			<h1 class="title">Основная информация</h1>
-			<img src="img/photo.jpg" alt="" class="photo">
-			<ul class="about-me">
-				<li><span class="field">Меня зовут:</span>Иванов Александр</li>
-				<li><span class="field">Мой возраст:</span>24</li>
-				<li><span class="field">Мой город:</span>Санкт-Петербург</li>
-				<li><span class="field">Моя специализация:</span>Веб-разработчик, Системный администратор</li>
-				<li>
-					<span class="field">Ключевые навыки:</span>
-					<ul class="skills">
-						<li>html</li>
-						<li>css</li>
-						<li>javascript</li>
-						<li>gulp</li>
-						<li>git</li>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">Вы используете <strong>старую</strong> версию баузера. Пожалуйста,
+		<a href="http://browsehappy.com/">обновите ваш браузер</a>.</p>
+	<![endif]-->
+	<div class="main-page">
+		<header class="page-header">
+			<img class="logo" src="img/logo.png" alt="Loftscool - от мыслителя к создателю">
+			<ul class="social">
+				<li class="social-item">
+					<a href="" class="social-item-link icon-social-vk">ВКонтакте</a>
+				</li>
+				<li class="social-item">
+					<a href="" class="social-item-link icon-social-tw">Twitter</a>
+				</li>
+				<li class="social-item">
+					<a href="" class="social-item-link icon-social-fb">Facebook</a>
+				</li>
+				<li class="social-item">
+					<a href="" class="social-item-link icon-social-git">GitHub</a>
+				</li>
+			</ul>
+		</header>
+		<div class="page-wrapper">
+			<aside class="main-sidebar">
+				<nav class="main-menu">
+					<ul>
+						<li class="menu-item active">
+							<a class="menu-link" href="">Обо мне</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="">Мои работы</a>
+						</li>
+						<li class="menu-item">
+							<a class="menu-link" href="">Связаться со мной</a>
+						</li>
 					</ul>
-				</li>
-			</ul>
-		</div>
-		<div class="work page-block">
-			<h1 class="title">Опыт работы</h1>
-			<ul>
-				<li class="work-item">
-					<h4>УК "2-берега" - Системный администратор, Зам. руководителя IT Отдела</h4>
-					<p>Сентябрь 2011 - Июнь 2013</p>
-				</li>
-				<li class="work-item">
-					<h4>ООО "Ласерта" - Системный администратор</h4>
-					<p>Декабрь 2013 - Июнь 2014</p>
-				</li>
-			</ul>
-		</div>
-		<div class="education page-block">
-			<h1 class="title">Образование</h1>
-			<ul>
-				<li class="education-item university">
-					<h4>Высшее, СПбГМТУ</h4>
-					<p>Сентябрь 2007 - Июнь 2012</p>
-				</li>
-				<li class="education-item course">
-					<h4>Курсы Loftschool.ru</h4>
-					<p>Май 2015 - по настоящее время</p>
-				</li>
-			</ul>
-		</div>
-		<nav class="main-menu page-block">
-			<ul>
-				<li class="menu-item active"><a href="">Обо мне</a></li>
-				<li class="menu-item"><a href="">Мои работы</a></li>
-				<li class="menu-item"><a href="">Связаться со мной</a></li>
-			</ul>
-		</nav>
-		<div class="contact page-block">
-			<h2 class="title">Контакты</h2>
-			<ul>
-				<li class="contact-item"><div class="icon icon-contact-mail"></div><a href="mailto:zmn.wtr@gmail.com">zmn.wtr@gmail.com</a></li>
-				<li class="contact-item"><div class="icon icon-contact-phone"></div><a href="tel:+79500232125">+79500232125</a></li>
-				<li class="contact-item"><div class="icon icon-contact-skype"></div><a href="skype:zraza666?chat">zraza666</a></li>
-			</ul>
+				</nav>
+				<section class="contact">
+					<h2 class="title">Контакты</h2>
+					<ul>
+						<li class="contact-item">
+							<div class="icon icon-contact-mail"></div>
+							<a class="contact-link" href="mailto:zmn.wtr@gmail.com">zmn.wtr@gmail.com</a>
+						</li>
+						<li class="contact-item">
+							<div class="icon icon-contact-phone"></div>
+							<a class="contact-link" href="tel:+79500232125">+79500232125</a>
+						</li>
+						<li class="contact-item">
+							<div class="icon icon-contact-skype"></div>
+							<a class="contact-link" href="skype:zraza666?chat">zraza666</a>
+						</li>
+					</ul>
+				</section>
+			</aside>
+			<section class="general info-block">
+				<h1 class="title">Основная информация</h1>
+				<div class="photo-box">
+					<img src="img/photo.jpg" alt="" class="photo">
+				</div>
+				<ul class="about-me">
+					<li class="about-me-item">
+						<div class="about-me-field">Меня зовут:</div> 
+						<div class="about-me-value">Иванов Александр</div>
+					</li>
+					<li class="about-me-item">
+						<div class="about-me-field">Мой возраст:</div> 
+						<div class="about-me-value">24</div>
+					</li>
+					<li class="about-me-item">
+						<div class="about-me-field">Мой город:</div> 
+						<div class="about-me-value">Санкт-Петербург</div>
+					</li>
+					<li class="about-me-item">
+						<div class="about-me-field">Моя специализация:</div> 
+						<div class="about-me-value">Веб-разработчик, Системный администратор</div>
+					</li>
+					<li class="about-me-item">
+						<div class="about-me-field">Ключевые навыки:</div>
+						<div class="about-me-value">
+							<ul class="skills">
+								<li class="skills-item">html</li>
+								<li class="skills-item">css</li>
+								<li class="skills-item">javascript</li>
+								<li class="skills-item">gulp</li>
+								<li class="skills-item">git</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="work info-block">
+				<h1 class="title">Опыт работы</h1>
+				<ul>
+					<li class="work-item">
+						<h4>УК "2-берега" - Системный администратор, Зам. руководителя IT Отдела</h4>
+						<p>Сентябрь 2011 - Июнь 2013</p>
+					</li>
+					<li class="work-item">
+						<h4>ООО "Ласерта" - Системный администратор</h4>
+						<p>Декабрь 2013 - Июнь 2014</p>
+					</li>
+				</ul>
+			</section>
+			<section class="education info-block">
+				<h1 class="title">Образование</h1>
+				<ul>
+					<li class="education-item university">
+						<h4>Высшее, СПбГМТУ</h4>
+						<p>Сентябрь 2007 - Июнь 2012</p>
+					</li>
+					<li class="education-item course">
+						<h4>Курсы Loftschool.ru</h4>
+						<p>Май 2015 - по настоящее время</p>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</div>
 	<footer class="page-footer">
-		<button class="login icon-login-lock"></button>
-		<p class="copyright">&copy; 2015, Ivanov Alexander</p>
+		<div class="footer-wrapper">
+			<p class="copyright">&copy; 2015, Ivanov Alexander</p>
+			<button class="login icon-login-lock">Вход</button>
+		</div>
 	</footer>
 </body>
 </html>

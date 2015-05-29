@@ -26,10 +26,9 @@ gulp.task('css', function () {
 	gulp.src('./app/sass/*.scss')
 	    .pipe(sass.sync().on('error', sass.logError))
 		.pipe(autoprefixer())
-        .pipe(gulp.dest('./app/css'));
-	gulp.src('./app/css/*.css')
+		.pipe(gulp.dest('./app/css/'))
 		.pipe(connect.reload());
-})
+});
 
 // Работа с js
 gulp.task('js', function () {
