@@ -107,14 +107,24 @@ body {
   .page-wrapper:before {
     display: table; }
 
+.header-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 35px;
+  padding-bottom: 35px; }
+  .header-wrapper:after, .header-wrapper:before {
+    content: "";
+    display: block;
+    clear: both; }
+  .header-wrapper:before {
+    display: table; }
+
 .page-header {
   background-color: #eff3f7;
   margin-bottom: 40px; }
   .page-header .logo {
-    padding: 35px 100px;
     float: left; }
   .page-header .social {
-    padding: 35px 100px;
     float: right; }
     .page-header .social-item {
       display: inline-block;
@@ -151,18 +161,19 @@ body {
   background-color: #eff3f7;
   margin-bottom: 25px;
   overflow: hidden;
-  border-radius: 3px; }
+  border-radius: 4px; }
   .main-menu .menu-link {
     display: block;
     text-decoration: none;
     color: #94a8ba;
     font-size: 21px;
-    padding: 25px 15px;
+    padding: 20px 15px;
     margin-left: 10px;
     margin-right: 10px; }
-  .main-menu .menu-item:nth-child(2) .menu-link {
-    border-bottom: 2px solid #3ba8c0;
-    color: #3ba8c0; }
+    .main-menu .menu-link:hover {
+      color: #3ba8c0; }
+  .main-menu .menu-item:last-child .menu-link {
+    border-top: 2px solid #3ba8c0; }
   .main-menu .active.menu-item {
     background-color: #3ba8c0; }
     .main-menu .active.menu-item .menu-link {
@@ -174,12 +185,12 @@ body {
   color: #fff;
   margin-bottom: 25px;
   overflow: hidden;
-  border-radius: 3px; }
+  border-radius: 4px; }
   .contact .title {
     background-color: #3ba8c0;
-    padding: 15px 25px; }
+    padding: 5px 25px; }
   .contact-item {
-    padding: 10px 0;
+    padding: 5px 0;
     background-color: #41b9d3; }
   .contact-link {
     position: relative;
@@ -223,14 +234,14 @@ body {
   margin-bottom: 25px;
   padding-bottom: 35px;
   padding-right: 25px;
-  border-radius: 3px;
+  border-radius: 4px;
   overflow: hidden;
   width: 650px;
   float: right; }
   .info-block .title {
     display: table;
     color: #41b9d3;
-    padding: 25px;
+    padding: 20px 25px;
     border-bottom: 2px solid #3ba8c0;
     margin-right: auto;
     margin-bottom: 25px; }
@@ -244,7 +255,8 @@ body {
   border: 3px solid #3ba8c0;
   margin-left: 55px;
   margin-right: 10px;
-  margin-bottom: 65px; }
+  margin-bottom: 65px;
+  margin-top: 15px; }
 
 .general .photo {
   position: relative;
@@ -269,12 +281,11 @@ body {
   background-color: #3ba8c0;
   background: -webkit-linear-gradient(bottom, #3597ad 50%, #3ba8c0 50%);
   background: linear-gradient(to top, #3597ad 50%, #3ba8c0 50%);
-  padding: 5px 15px;
+  padding: 2px 15px;
   margin-right: 5px;
   margin-bottom: 10px;
   font-size: 14px;
-  font-family: 'Proxima-Nova', serif;
-  font-weight: 700; }
+  font-family: 'ProximaNovaCond-Semibold', serif; }
 
 .work-list, .education-list {
   margin-left: 55px; }
@@ -308,8 +319,9 @@ body {
     background-position-x: 10px; }
 
 .footer-wrapper {
-  width: 960px;
-  margin: auto; }
+  max-width: 960px;
+  margin: auto;
+  padding: 25px 30px 0 25px; }
   .footer-wrapper:after, .footer-wrapper:before {
     content: "";
     display: block;
@@ -323,14 +335,12 @@ body {
   .page-footer .login {
     display: block;
     float: left;
-    text-indent: -9999px;
-    margin-top: 20px;
-    margin-left: 30px; }
+    text-indent: -9999px; }
     .page-footer .login:hover {
       background-position: -291px -164px; }
   .page-footer .copyright {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 10px; }
   .page-footer:before {
     content: "";
     display: block;

@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'ProximaNovaCond-SemiboldIt';
-  src: url('ProximaNovaCond-SemiboldIt.eot');
-  src: url('ProximaNovaCond-SemiboldIt.eot?#iefix') format('embedded-opentype'),
-       url('ProximaNovaCond-SemiboldIt.woff') format('woff'),
-       url('ProximaNovaCond-SemiboldIt.ttf') format('truetype');
+  font-family: 'ProximaNovaCond-Semibold';
+  src: url('ProximaNovaCond-Semibold.eot');
+  src: url('ProximaNovaCond-Semibold.eot?#iefix') format('embedded-opentype'),
+       url('ProximaNovaCond-Semibold.woff') format('woff'),
+       url('ProximaNovaCond-Semibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

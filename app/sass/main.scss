@@ -56,19 +56,24 @@ body{
 	@include clearfix;
 }
 
+.header-wrapper{
+	max-width: 1200px;
+	margin: auto;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	@include clearfix;
+}
 // Header START
 .page-header{
 	background-color: $bg-color;
 	margin-bottom: 40px;
 
 	.logo{
-		padding: 35px 100px;
 		float: left;
 	}
 	
 	//Social buttons
 	.social{
-		padding: 35px 100px;
 		float: right;
 
 		&-item{
@@ -115,23 +120,24 @@ body{
 	background-color: $bg-color;
 	margin-bottom: 25px;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 4px;
 
 	.menu-link{
 		display: block;
 		text-decoration: none;
 		color: $text-color*2;
 		font-size: 21px;
-		padding: 25px 15px;
+		padding: 20px 15px;
 		margin-left: 10px;
 		margin-right: 10px;
-	}
-
-	//Delimiter for menu items
-	.menu-item:nth-child(2){
-		.menu-link{
-			border-bottom: 2px solid $general-color;
+		&:hover{
 			color: $general-color;
+		}
+	}
+	//Delimiter for menu items
+	.menu-item:last-child{
+		.menu-link{
+			border-top: 2px solid $general-color;
 		}
 	}
 
@@ -149,14 +155,15 @@ body{
 	color: #fff;
 	margin-bottom: 25px;
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 4px;
 
 	.title{
 		background-color: $general-color;
-		padding: 15px 25px;
+		padding: 5px 25px;
+
 	}
 	&-item{
-		padding: 10px 0;
+		padding: 5px 0;
 		background-color: $general-color*1.1;
 	}
 	&-link{
@@ -204,7 +211,7 @@ body{
 	margin-bottom: 25px;
 	padding-bottom: 35px;
 	padding-right: 25px;
-	border-radius: 3px;
+	border-radius: 4px;
 	overflow: hidden;
 	width: 650px;
 	float: right;
@@ -212,7 +219,7 @@ body{
 	.title{
 		display: table;
 		color: $general-color * 1.1;
-		padding: 25px;
+		padding: 20px 25px;
 		border-bottom: 2px solid $general-color;
 		margin-right: auto;
 		margin-bottom: 25px;
@@ -230,6 +237,7 @@ body{
 		margin-left: 55px;
 		margin-right: 10px;
 		margin-bottom: 65px;
+		margin-top: 15px;
 	}
 	.photo{
 		position: relative;
@@ -257,12 +265,12 @@ body{
 			color: #fff;
 			background-color: $general-color;
 			background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
-			padding: 5px 15px;
+			padding: 2px 15px;
 			margin-right: 5px;
 			margin-bottom: 10px;
 			font-size: 14px;
-			font-family: 'Proxima-Nova', serif;
-			font-weight: 700;
+			font-family: 'ProximaNovaCond-Semibold', serif;
+			//font-weight: 700;
 		}
 	}
 }
@@ -312,9 +320,10 @@ body{
 }
 
 .footer-wrapper{
-	width: 960px;
+	max-width: 960px;
 	margin: auto;
 	@include clearfix;
+	padding: 25px 30px 0 25px;
 }
 
 .page-footer{
@@ -325,15 +334,13 @@ body{
 		display: block;
 		float: left;
 		text-indent: -9999px;
-		margin-top: 20px;
-		margin-left: 30px;
 		&:hover{
 			@include sprite-position($login-unlock);
 		}
 	}
 	.copyright{
 		text-align: center;
-		margin-top: 30px;
+		margin-top: 10px;
 	}
 	&:before{
 		content: "";
