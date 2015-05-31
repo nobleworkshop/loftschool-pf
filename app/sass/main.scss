@@ -1,3 +1,5 @@
+@import 'sprite';
+
 $bg-color: #eff3f7;
 $general-color: #3ba8c0;
 $text-color: #4a545d;
@@ -8,7 +10,12 @@ $text-color: #4a545d;
 		display:block;
 		clear:both;
 	}
+	&:before{
+		display:table;
+	}
 }
+
+@include sprites(($social-vk, $social-fb, $social-tw, $social-git, $login-lock));
 
 html, body{
 	height: 100%;
@@ -32,53 +39,77 @@ ul{
 }
 
 body{
+	min-width: 960px;
 	background-image: url('../img/bg.png');
-	font-family: 'Fira Sans', sans-serif;
+	font-family: 'fira_sansbook', sans-serif;
 }
 
+.hidden{
+	display: none!important;
+}
 
+//Wrapper only for general block
 .page-wrapper{
 	width: 960px;
 	margin: auto;
-	padding-top: 40px;
 	padding-bottom: 40px;
 	@include clearfix;
 }
 
+// Header START
 .page-header{
 	background-color: $bg-color;
-	margin-bottom: 25px;
+	margin-bottom: 40px;
 
 	.logo{
 		padding: 35px 100px;
 		float: left;
 	}
-
+	
+	//Social buttons
 	.social{
 		padding: 35px 100px;
 		float: right;
 
 		&-item{
 			display: inline-block;
-			&-link{
-				display: block;
-				text-indent: -9999px;
-			}
+			margin-left: 25px;
+		}
+		&-link{
+			display: block;
+			text-indent: -9999px;
+		}
+		&-vk:hover{
+			@include sprite-position($social-vk-hover);
+		}
+		&-tw:hover{
+			@include sprite-position($social-tw-hover);
+		}
+		&-fb:hover{
+			@include sprite-position($social-fb-hover);
+		}
+		&-git:hover{
+			@include sprite-position($social-git-hover);
 		}
 	}
 
 	@include clearfix;
-
+	
+	//Gradient line
 	&:after{
 		height: 3px;
 		background-image: url('../img/line.jpg');
+		background-position: center;
+		background-repeat: repeat-y;
 		background-size: 100%;
 	}
 }
+//Header END
 
-
+//Sidebar START
 .main-sidebar{
 	float: left;
+	width: 250px;
 }
 .main-menu{
 	background-color: $bg-color;
@@ -94,17 +125,19 @@ body{
 		padding: 25px 15px;
 		margin-left: 10px;
 		margin-right: 10px;
-		border-bottom: 3px solid transparent;
+	}
 
-		&:hover{
-			border-bottom: 3px solid $general-color;
+	//Delimiter for menu items
+	.menu-item:nth-child(2){
+		.menu-link{
+			border-bottom: 2px solid $general-color;
 			color: $general-color;
 		}
 	}
 
-	.menu-item.active{ 
+	.active.menu-item{ 
 		background-color: $general-color;
-		a{
+		.menu-link{
 			font-size: 23px;
 			color: #fff;
 			border: none;
@@ -122,23 +155,36 @@ body{
 		background-color: $general-color;
 		padding: 15px 25px;
 	}
-
 	&-item{
 		padding: 10px 0;
-		.icon{
-			vertical-align: middle;
-			display: inline-block;
-			margin-left: 35px;
+		background-color: $general-color*1.1;
+	}
+	&-link{
+		position: relative;
+		margin-left: 85px;
+		vertical-align: middle;
+		color: #fff;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
 		}
-		.contact-link{
-			vertical-align: middle;
-			margin-left: 20px;
-			color: #fff;
-			text-decoration: none;
-			&:hover{
-				text-decoration: underline;
-			}
+		&:before{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -40px;
+			content: "";
 		}
+		&-mail:before{
+			@include sprite($contact-mail);
+		}
+		&-phone:before{
+			@include sprite($contact-phone);
+		}
+		&-skype:before{
+			@include sprite($contact-skype);
+		}
+
 	}
 	
 	@for $i from 1 through 3 {
@@ -148,9 +194,16 @@ body{
 	}
 
 }
+//Sidebar END
+
+//General START
+//For information blocks on page
 .info-block{
+	box-sizing: border-box;
 	background-color: $bg-color;
 	margin-bottom: 25px;
+	padding-bottom: 35px;
+	padding-right: 25px;
 	border-radius: 3px;
 	overflow: hidden;
 	width: 650px;
@@ -165,6 +218,7 @@ body{
 		margin-bottom: 25px;
 	}
 }
+
 .general{
 	.photo-box{
 		overflow: hidden;
@@ -174,22 +228,21 @@ body{
 		border-radius: 100%;
 		border: 3px solid $general-color;
 		margin-left: 55px;
-		margin-right: 20px;
+		margin-right: 10px;
 		margin-bottom: 65px;
 	}
 	.photo{
 		position: relative;
-		left: -60px;
+		width: 100%;
 	}
 	.about-me{
 		&-item{
 			display: table;
-			border-spacing: 5px;
+			border-spacing: 15px 5px;
 		}
 		&-field{
 			display: table-cell;
 			font-weight: bold;
-			margin-right: 10px;
 			white-space:nowrap;
 		}
 		&-value{
@@ -203,7 +256,7 @@ body{
 			border-radius: 3px;
 			color: #fff;
 			background-color: $general-color;
-			background: linear-gradient(to top, $general-color*0.7 50%, $general-color 50%);
+			background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
 			padding: 5px 15px;
 			margin-right: 5px;
 			margin-bottom: 10px;
@@ -214,9 +267,48 @@ body{
 	}
 }
 
+.work, .education{
+	&-list{
+		margin-left: 55px;
+	}
+	&-item{
+		margin-bottom: 20px;
+	}
+	&-title{
+		margin-bottom: 10px;
+	}
+	&-dates{
+		margin: 0;
+	}
+}
 .work{
+	&-item{
+		padding-left: 65px;
+		background-image: url('../img/work.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+	&-dates{
+
+	}
+
 }
 .education{
+	&-list{
+		margin-left: 55px;
+	}
+	&-item{
+		padding-left: 65px;
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		&.university{
+			background-image: url('../img/study.png');
+		}
+		&.course{
+			background-image: url('../img/course.png');
+			background-position-x: 10px;
+		}
+	}
 }
 
 .footer-wrapper{
@@ -224,23 +316,32 @@ body{
 	margin: auto;
 	@include clearfix;
 }
+
 .page-footer{
 	background-color: $bg-color;
 	height: 80px;
 	
 	.login{
+		display: block;
 		float: left;
-		border: none;
-		background-color: transparent;
 		text-indent: -9999px;
+		margin-top: 20px;
+		margin-left: 30px;
+		&:hover{
+			@include sprite-position($login-unlock);
+		}
 	}
 	.copyright{
 		text-align: center;
 		margin-top: 30px;
 	}
 	&:before{
+		content: "";
+		display: block;
 		height: 3px;
 		background-image: url('../img/line.jpg');
+		background-position: center;
+		background-repeat: repeat-y;
 		background-size: 100%;
 	}
 }

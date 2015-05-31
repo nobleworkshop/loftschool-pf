@@ -1,3 +1,63 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+.social-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -97px 0px;
+  width: 47px;
+  height: 47px; }
+
+.social-fb {
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 47px;
+  height: 47px; }
+
+.social-tw {
+  background-image: url(../img/sprite.png);
+  background-position: -97px -97px;
+  width: 47px;
+  height: 47px; }
+
+.social-git {
+  background-image: url(../img/sprite.png);
+  background-position: -194px -97px;
+  width: 47px;
+  height: 47px; }
+
+.login-lock {
+  background-image: url(../img/sprite.png);
+  background-position: -373px 0px;
+  width: 20px;
+  height: 32px; }
+
 html, body {
   height: 100%;
   color: #4a545d; }
@@ -29,22 +89,27 @@ ul {
   padding: 0; }
 
 body {
+  min-width: 960px;
   background-image: url("../img/bg.png");
-  font-family: 'Fira Sans', sans-serif; }
+  font-family: 'fira_sansbook', sans-serif; }
+
+.hidden {
+  display: none !important; }
 
 .page-wrapper {
   width: 960px;
   margin: auto;
-  padding-top: 40px;
   padding-bottom: 40px; }
   .page-wrapper:after, .page-wrapper:before {
     content: "";
     display: block;
     clear: both; }
+  .page-wrapper:before {
+    display: table; }
 
 .page-header {
   background-color: #eff3f7;
-  margin-bottom: 25px; }
+  margin-bottom: 40px; }
   .page-header .logo {
     padding: 35px 100px;
     float: left; }
@@ -52,21 +117,35 @@ body {
     padding: 35px 100px;
     float: right; }
     .page-header .social-item {
-      display: inline-block; }
-      .page-header .social-item-link {
-        display: block;
-        text-indent: -9999px; }
+      display: inline-block;
+      margin-left: 25px; }
+    .page-header .social-link {
+      display: block;
+      text-indent: -9999px; }
+    .page-header .social-vk:hover {
+      background-position: 0px -97px; }
+    .page-header .social-tw:hover {
+      background-position: -194px 0px; }
+    .page-header .social-fb:hover {
+      background-position: 0px -194px; }
+    .page-header .social-git:hover {
+      background-position: -97px -194px; }
   .page-header:after, .page-header:before {
     content: "";
     display: block;
     clear: both; }
+  .page-header:before {
+    display: table; }
   .page-header:after {
     height: 3px;
     background-image: url("../img/line.jpg");
+    background-position: center;
+    background-repeat: repeat-y;
     background-size: 100%; }
 
 .main-sidebar {
-  float: left; }
+  float: left;
+  width: 250px; }
 
 .main-menu {
   background-color: #eff3f7;
@@ -80,14 +159,13 @@ body {
     font-size: 21px;
     padding: 25px 15px;
     margin-left: 10px;
-    margin-right: 10px;
-    border-bottom: 3px solid transparent; }
-    .main-menu .menu-link:hover {
-      border-bottom: 3px solid #3ba8c0;
-      color: #3ba8c0; }
-  .main-menu .menu-item.active {
+    margin-right: 10px; }
+  .main-menu .menu-item:nth-child(2) .menu-link {
+    border-bottom: 2px solid #3ba8c0;
+    color: #3ba8c0; }
+  .main-menu .active.menu-item {
     background-color: #3ba8c0; }
-    .main-menu .menu-item.active a {
+    .main-menu .active.menu-item .menu-link {
       font-size: 23px;
       color: #fff;
       border: none; }
@@ -101,18 +179,37 @@ body {
     background-color: #3ba8c0;
     padding: 15px 25px; }
   .contact-item {
-    padding: 10px 0; }
-    .contact-item .icon {
-      vertical-align: middle;
-      display: inline-block;
-      margin-left: 35px; }
-    .contact-item .contact-link {
-      vertical-align: middle;
-      margin-left: 20px;
-      color: #fff;
-      text-decoration: none; }
-      .contact-item .contact-link:hover {
-        text-decoration: underline; }
+    padding: 10px 0;
+    background-color: #41b9d3; }
+  .contact-link {
+    position: relative;
+    margin-left: 85px;
+    vertical-align: middle;
+    color: #fff;
+    text-decoration: none; }
+    .contact-link:hover {
+      text-decoration: underline; }
+    .contact-link:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      content: ""; }
+    .contact-link-mail:before {
+      background-image: url(../img/sprite.png);
+      background-position: -91px -291px;
+      width: 21px;
+      height: 16px; }
+    .contact-link-phone:before {
+      background-image: url(../img/sprite.png);
+      background-position: -373px -152px;
+      width: 19px;
+      height: 20px; }
+    .contact-link-skype:before {
+      background-image: url(../img/sprite.png);
+      background-position: -373px -82px;
+      width: 20px;
+      height: 20px; }
   .contact-item:nth-child(1) {
     background-color: #41b9d3; }
   .contact-item:nth-child(2) {
@@ -121,8 +218,11 @@ body {
     background-color: #4ddafa; }
 
 .info-block {
+  box-sizing: border-box;
   background-color: #eff3f7;
   margin-bottom: 25px;
+  padding-bottom: 35px;
+  padding-right: 25px;
   border-radius: 3px;
   overflow: hidden;
   width: 650px;
@@ -143,21 +243,20 @@ body {
   border-radius: 100%;
   border: 3px solid #3ba8c0;
   margin-left: 55px;
-  margin-right: 20px;
+  margin-right: 10px;
   margin-bottom: 65px; }
 
 .general .photo {
   position: relative;
-  left: -60px; }
+  width: 100%; }
 
 .general .about-me-item {
   display: table;
-  border-spacing: 5px; }
+  border-spacing: 15px 5px; }
 
 .general .about-me-field {
   display: table-cell;
   font-weight: bold;
-  margin-right: 10px;
   white-space: nowrap; }
 
 .general .about-me-value {
@@ -168,14 +267,45 @@ body {
   border-radius: 3px;
   color: #fff;
   background-color: #3ba8c0;
-  background: -webkit-linear-gradient(bottom, #297686 50%, #3ba8c0 50%);
-  background: linear-gradient(to top, #297686 50%, #3ba8c0 50%);
+  background: -webkit-linear-gradient(bottom, #3597ad 50%, #3ba8c0 50%);
+  background: linear-gradient(to top, #3597ad 50%, #3ba8c0 50%);
   padding: 5px 15px;
   margin-right: 5px;
   margin-bottom: 10px;
   font-size: 14px;
   font-family: 'Proxima-Nova', serif;
   font-weight: 700; }
+
+.work-list, .education-list {
+  margin-left: 55px; }
+
+.work-item, .education-item {
+  margin-bottom: 20px; }
+
+.work-title, .education-title {
+  margin-bottom: 10px; }
+
+.work-dates, .education-dates {
+  margin: 0; }
+
+.work-item {
+  padding-left: 65px;
+  background-image: url("../img/work.png");
+  background-repeat: no-repeat;
+  background-position: left center; }
+
+.education-list {
+  margin-left: 55px; }
+
+.education-item {
+  padding-left: 65px;
+  background-repeat: no-repeat;
+  background-position: 0 center; }
+  .education-item.university {
+    background-image: url("../img/study.png"); }
+  .education-item.course {
+    background-image: url("../img/course.png");
+    background-position-x: 10px; }
 
 .footer-wrapper {
   width: 960px;
@@ -184,19 +314,28 @@ body {
     content: "";
     display: block;
     clear: both; }
+  .footer-wrapper:before {
+    display: table; }
 
 .page-footer {
   background-color: #eff3f7;
   height: 80px; }
   .page-footer .login {
+    display: block;
     float: left;
-    border: none;
-    background-color: transparent;
-    text-indent: -9999px; }
+    text-indent: -9999px;
+    margin-top: 20px;
+    margin-left: 30px; }
+    .page-footer .login:hover {
+      background-position: -291px -164px; }
   .page-footer .copyright {
     text-align: center;
     margin-top: 30px; }
   .page-footer:before {
+    content: "";
+    display: block;
     height: 3px;
     background-image: url("../img/line.jpg");
+    background-position: center;
+    background-repeat: repeat-y;
     background-size: 100%; }

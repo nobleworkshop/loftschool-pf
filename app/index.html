@@ -7,7 +7,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<title>Ivanov Alexander - Portfolio page</title>
-	<!-- <script src="bower_components/modernizr/modernizr.js"> -->
+	<script src="bower_components/modernizr/modernizr.js"></script>
 	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
 	<link rel="stylesheet" href="font/fira/fira.css">
 	<link rel="stylesheet" href="font/Proxima-Nova/font.css">
@@ -24,16 +24,16 @@
 			<img class="logo" src="img/logo.png" alt="Loftscool - от мыслителя к создателю">
 			<ul class="social">
 				<li class="social-item">
-					<a href="" class="social-item-link icon-social-vk">ВКонтакте</a>
-				</li>
-				<li class="social-item">
-					<a href="" class="social-item-link icon-social-tw">Twitter</a>
-				</li>
-				<li class="social-item">
-					<a href="" class="social-item-link icon-social-fb">Facebook</a>
-				</li>
-				<li class="social-item">
-					<a href="" class="social-item-link icon-social-git">GitHub</a>
+					<a href="https://vk.com/id2234555" class="social-link social-vk">ВКонтакте</a>
+				</li><!--
+				--><li class="social-item hidden">
+					<a href="https://www.facebook.com/profile.php?id=100005481618692" class="social-link social-tw">Twitter</a>
+				</li><!--
+				--><li class="social-item">
+					<a href="" class="social-link social-fb">Facebook</a>
+				</li><!--
+				--><li class="social-item">
+					<a href="https://github.com/zarza666" class="social-link social-git">GitHub</a>
 				</li>
 			</ul>
 		</header>
@@ -54,18 +54,15 @@
 				</nav>
 				<section class="contact">
 					<h2 class="title">Контакты</h2>
-					<ul>
+					<ul class="contact-list">
 						<li class="contact-item">
-							<div class="icon icon-contact-mail"></div>
-							<a class="contact-link" href="mailto:zmn.wtr@gmail.com">zmn.wtr@gmail.com</a>
+							<a class="contact-link contact-link-mail" href="mailto:zmn.wtr@gmail.com">zmn.wtr@gmail.com</a>
 						</li>
 						<li class="contact-item">
-							<div class="icon icon-contact-phone"></div>
-							<a class="contact-link" href="tel:+79500232125">+79500232125</a>
+							<a class="contact-link contact-link-phone" href="tel:+79500232125">+79500232125</a>
 						</li>
 						<li class="contact-item">
-							<div class="icon icon-contact-skype"></div>
-							<a class="contact-link" href="skype:zraza666?chat">zraza666</a>
+							<a class="contact-link contact-link-skype" href="skype:zraza666?chat">zraza666</a>
 						</li>
 					</ul>
 				</section>
@@ -86,7 +83,7 @@
 					</li>
 					<li class="about-me-item">
 						<div class="about-me-field">Мой город:</div> 
-						<div class="about-me-value">Санкт-Петербург</div>
+						<div class="about-me-value">Санкт-Петербург, Россия</div>
 					</li>
 					<li class="about-me-item">
 						<div class="about-me-field">Моя специализация:</div> 
@@ -108,27 +105,27 @@
 			</section>
 			<section class="work info-block">
 				<h1 class="title">Опыт работы</h1>
-				<ul>
+				<ul class="work-list">
 					<li class="work-item">
-						<h4>УК "2-берега" - Системный администратор, Зам. руководителя IT Отдела</h4>
-						<p>Сентябрь 2011 - Июнь 2013</p>
+						<h4 class="work-title">УК "2-берега" - Системный администратор, Зам. руководителя IT Отдела</h4>
+						<p class="work-dates">Сентябрь 2011 - Июнь 2013</p>
 					</li>
 					<li class="work-item">
-						<h4>ООО "Ласерта" - Системный администратор</h4>
-						<p>Декабрь 2013 - Июнь 2014</p>
+						<h4 class="work-title">ООО "Ласерта" - Системный администратор</h4>
+						<p class="work-dates">Декабрь 2013 - Июнь 2014</p>
 					</li>
 				</ul>
 			</section>
 			<section class="education info-block">
 				<h1 class="title">Образование</h1>
-				<ul>
+				<ul class="education-list">
 					<li class="education-item university">
-						<h4>Высшее, СПбГМТУ</h4>
-						<p>Сентябрь 2007 - Июнь 2012</p>
+						<h4 class="education-title">Высшее, СПбГМТУ</h4>
+						<p class="education-dates">Сентябрь 2007 - Июнь 2012</p>
 					</li>
 					<li class="education-item course">
-						<h4>Курсы Loftschool.ru</h4>
-						<p>Май 2015 - по настоящее время</p>
+						<h4 class="education-title">Курсы Loftschool.ru</h4>
+						<p class="education-dates">Май 2015 - по настоящее время</p>
 					</li>
 				</ul>
 			</section>
@@ -136,8 +133,8 @@
 	</div>
 	<footer class="page-footer">
 		<div class="footer-wrapper">
+			<a href="#" class="login login-lock">Вход</a>
 			<p class="copyright">&copy; 2015, Ivanov Alexander</p>
-			<button class="login icon-login-lock">Вход</button>
 		</div>
 	</footer>
 </body>
