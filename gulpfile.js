@@ -53,6 +53,30 @@ gulp.task('sprite', function () {
   spriteData.css.pipe(gulp.dest('./app/sass/'));
 })
 
+gulp.task('deploy', function() {
+	//Задача на доработку, пока только копирует
+	gulp.src('./app/sass/*.scss')
+	    .pipe(sass.sync().on('error', sass.logError))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('./dist/css/'));
+	gulp.src('./app/bower_components/modernizr/modernizr.js')
+		.pipe(gulp.dest('./dist/bower_components/modernizr/'));
+	gulp.src('./app/bower_components/normalize.css/normalize.css')
+		.pipe(gulp.dest('./dist/bower_components/normalize.css/'));
+	gulp.src('./app/bower_components/jquery/dist/jquery.min.js')
+		.pipe(gulp.dest('./dist/bower_components/jquery/dist/'));
+	gulp.src('./app/img/*')
+		.pipe(gulp.dest('./dist/img/'));
+	gulp.src('./app/icon/*')
+		.pipe(gulp.dest('./dist/icon/'));
+	gulp.src('./app/font/**')
+		.pipe(gulp.dest('./dist/font/'));
+	gulp.src('./app/index.html')
+		.pipe(gulp.dest('./dist/'));
+
+		
+})
+
 // Слежка
 gulp.task('watch', function () {
 	gulp.watch(['./app/*.html'], ['html'])

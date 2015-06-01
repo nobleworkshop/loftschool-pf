@@ -24,6 +24,7 @@ html, body{
 
 h1, h2, h3, h4, h5, h6{
 	margin: 0;
+	font-weight: normal;
 }
 h1{	font-size: 27px; }
 h2{	font-size: 21px; }
@@ -39,7 +40,7 @@ ul{
 }
 
 body{
-	min-width: 960px;
+	min-width: 980px;
 	background-image: url('../img/bg.png');
 	font-family: 'fira_sansbook', sans-serif;
 }
@@ -71,32 +72,6 @@ body{
 	.logo{
 		float: left;
 	}
-	
-	//Social buttons
-	.social{
-		float: right;
-
-		&-item{
-			display: inline-block;
-			margin-left: 25px;
-		}
-		&-link{
-			display: block;
-			text-indent: -9999px;
-		}
-		&-vk:hover{
-			@include sprite-position($social-vk-hover);
-		}
-		&-tw:hover{
-			@include sprite-position($social-tw-hover);
-		}
-		&-fb:hover{
-			@include sprite-position($social-fb-hover);
-		}
-		&-git:hover{
-			@include sprite-position($social-git-hover);
-		}
-	}
 
 	@include clearfix;
 	
@@ -107,6 +82,32 @@ body{
 		background-position: center;
 		background-repeat: repeat-y;
 		background-size: 100%;
+	}
+}
+
+//Social buttons
+.social{
+	float: right;
+
+	&-item{
+		display: inline-block;
+		margin-left: 25px;
+	}
+	&-link{
+		display: block;
+		text-indent: -9999px;
+	}
+	&-vk:hover{
+		@include sprite-position($social-vk-hover);
+	}
+	&-tw:hover{
+		@include sprite-position($social-tw-hover);
+	}
+	&-fb:hover{
+		@include sprite-position($social-fb-hover);
+	}
+	&-git:hover{
+		@include sprite-position($social-git-hover);
 	}
 }
 //Header END
@@ -133,11 +134,12 @@ body{
 		&:hover{
 			color: $general-color;
 		}
+		border-top: 2px solid $general-color;
 	}
 	//Delimiter for menu items
-	.menu-item:last-child{
+	.menu-item:first-child{
 		.menu-link{
-			border-top: 2px solid $general-color;
+			border: none;
 		}
 	}
 
@@ -147,6 +149,11 @@ body{
 			font-size: 23px;
 			color: #fff;
 			border: none;
+		}
+		&+.menu-item{
+			.menu-link{
+				border-top: none;
+			}
 		}
 	}
 }
@@ -257,21 +264,20 @@ body{
 			display: table-cell;
 		}
 	}
-
-	.skills{
-		&-item{
-			display: inline-block;
-			border-radius: 3px;
-			color: #fff;
-			background-color: $general-color;
-			background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
-			padding: 2px 15px;
-			margin-right: 5px;
-			margin-bottom: 10px;
-			font-size: 14px;
-			font-family: 'ProximaNovaCond-Semibold', serif;
-			//font-weight: 700;
-		}
+}
+.skills{
+	&-item{
+		display: inline-block;
+		border-radius: 3px;
+		color: #fff;
+		background-color: $general-color;
+		background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
+		padding: 2px 15px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+		font-size: 14px;
+		font-family: 'ProximaNovaCond-Semibold', serif;
+		//font-weight: 700;
 	}
 }
 
@@ -287,6 +293,7 @@ body{
 	}
 	&-dates{
 		margin: 0;
+		font-family: 'fira_sanslight', sans-serif;
 	}
 }
 .work{
@@ -296,10 +303,6 @@ body{
 		background-repeat: no-repeat;
 		background-position: left center;
 	}
-	&-dates{
-
-	}
-
 }
 .education{
 	&-list{
@@ -318,7 +321,9 @@ body{
 		}
 	}
 }
+// General END
 
+//Footer START
 .footer-wrapper{
 	max-width: 960px;
 	margin: auto;
@@ -341,6 +346,7 @@ body{
 	.copyright{
 		text-align: center;
 		margin-top: 10px;
+		font-family: 'fira_sanslight', sans-serif;
 	}
 	&:before{
 		content: "";
@@ -352,3 +358,4 @@ body{
 		background-size: 100%;
 	}
 }
+//Footer END

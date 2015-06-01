@@ -63,7 +63,8 @@ html, body {
   color: #4a545d; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin: 0;
+  font-weight: normal; }
 
 h1 {
   font-size: 27px; }
@@ -89,7 +90,7 @@ ul {
   padding: 0; }
 
 body {
-  min-width: 960px;
+  min-width: 980px;
   background-image: url("../img/bg.png");
   font-family: 'fira_sansbook', sans-serif; }
 
@@ -124,22 +125,6 @@ body {
   margin-bottom: 40px; }
   .page-header .logo {
     float: left; }
-  .page-header .social {
-    float: right; }
-    .page-header .social-item {
-      display: inline-block;
-      margin-left: 25px; }
-    .page-header .social-link {
-      display: block;
-      text-indent: -9999px; }
-    .page-header .social-vk:hover {
-      background-position: 0px -97px; }
-    .page-header .social-tw:hover {
-      background-position: -194px 0px; }
-    .page-header .social-fb:hover {
-      background-position: 0px -194px; }
-    .page-header .social-git:hover {
-      background-position: -97px -194px; }
   .page-header:after, .page-header:before {
     content: "";
     display: block;
@@ -152,6 +137,23 @@ body {
     background-position: center;
     background-repeat: repeat-y;
     background-size: 100%; }
+
+.social {
+  float: right; }
+  .social-item {
+    display: inline-block;
+    margin-left: 25px; }
+  .social-link {
+    display: block;
+    text-indent: -9999px; }
+  .social-vk:hover {
+    background-position: 0px -97px; }
+  .social-tw:hover {
+    background-position: -194px 0px; }
+  .social-fb:hover {
+    background-position: 0px -194px; }
+  .social-git:hover {
+    background-position: -97px -194px; }
 
 .main-sidebar {
   float: left;
@@ -169,17 +171,20 @@ body {
     font-size: 21px;
     padding: 20px 15px;
     margin-left: 10px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    border-top: 2px solid #3ba8c0; }
     .main-menu .menu-link:hover {
       color: #3ba8c0; }
-  .main-menu .menu-item:last-child .menu-link {
-    border-top: 2px solid #3ba8c0; }
+  .main-menu .menu-item:first-child .menu-link {
+    border: none; }
   .main-menu .active.menu-item {
     background-color: #3ba8c0; }
     .main-menu .active.menu-item .menu-link {
       font-size: 23px;
       color: #fff;
       border: none; }
+    .main-menu .active.menu-item + .menu-item .menu-link {
+      border-top: none; }
 
 .contact {
   color: #fff;
@@ -274,7 +279,7 @@ body {
 .general .about-me-value {
   display: table-cell; }
 
-.general .skills-item {
+.skills-item {
   display: inline-block;
   border-radius: 3px;
   color: #fff;
@@ -297,7 +302,8 @@ body {
   margin-bottom: 10px; }
 
 .work-dates, .education-dates {
-  margin: 0; }
+  margin: 0;
+  font-family: 'fira_sanslight', sans-serif; }
 
 .work-item {
   padding-left: 65px;
@@ -340,7 +346,8 @@ body {
       background-position: -291px -164px; }
   .page-footer .copyright {
     text-align: center;
-    margin-top: 10px; }
+    margin-top: 10px;
+    font-family: 'fira_sanslight', sans-serif; }
   .page-footer:before {
     content: "";
     display: block;
