@@ -88,10 +88,15 @@ body{
 //Social buttons
 .social{
 	float: right;
+	font-size: 0;
 
 	&-item{
 		display: inline-block;
 		margin-left: 25px;
+		font-size: 1em;
+	}
+	&-item:first-child{
+		margin-left: 0;
 	}
 	&-link{
 		display: block;

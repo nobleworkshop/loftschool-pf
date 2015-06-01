@@ -139,10 +139,14 @@ body {
     background-size: 100%; }
 
 .social {
-  float: right; }
+  float: right;
+  font-size: 0; }
   .social-item {
     display: inline-block;
-    margin-left: 25px; }
+    margin-left: 25px;
+    font-size: 1em; }
+  .social-item:first-child {
+    margin-left: 0; }
   .social-link {
     display: block;
     text-indent: -9999px; }
