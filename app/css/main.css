@@ -97,9 +97,18 @@ body {
 .hidden {
   display: none !important; }
 
+.main-page {
+  min-height: 100%;
+  margin-bottom: -80px; }
+  .main-page:after {
+    display: block;
+    content: "";
+    height: 80px; }
+
 .page-wrapper {
   width: 960px;
   margin: auto;
+  padding-top: 40px;
   padding-bottom: 40px; }
   .page-wrapper:after, .page-wrapper:before {
     content: "";
@@ -121,10 +130,7 @@ body {
     display: table; }
 
 .page-header {
-  background-color: #eff3f7;
-  margin-bottom: 40px; }
-  .page-header .logo {
-    float: left; }
+  background-color: #eff3f7; }
   .page-header:after, .page-header:before {
     content: "";
     display: block;
@@ -137,6 +143,9 @@ body {
     background-position: center;
     background-repeat: repeat-y;
     background-size: 100%; }
+
+.logo {
+  float: left; }
 
 .social {
   float: right;

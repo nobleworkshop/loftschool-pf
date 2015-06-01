@@ -38,7 +38,6 @@ ul{
 	margin: 0;
 	padding: 0;
 }
-
 body{
 	min-width: 980px;
 	background-image: url('../img/bg.png');
@@ -49,10 +48,20 @@ body{
 	display: none!important;
 }
 
+.main-page{ //For sticky footer
+	min-height: 100%;
+	margin-bottom: -80px;
+	&:after{
+		display: block;
+		content: "";
+		height: 80px;
+	}
+}
 //Wrapper only for general block
 .page-wrapper{
 	width: 960px;
 	margin: auto;
+	padding-top: 40px;
 	padding-bottom: 40px;
 	@include clearfix;
 }
@@ -67,11 +76,6 @@ body{
 // Header START
 .page-header{
 	background-color: $bg-color;
-	margin-bottom: 40px;
-
-	.logo{
-		float: left;
-	}
 
 	@include clearfix;
 	
@@ -83,6 +87,10 @@ body{
 		background-repeat: repeat-y;
 		background-size: 100%;
 	}
+}
+
+.logo{
+	float: left;
 }
 
 //Social buttons
@@ -282,7 +290,6 @@ body{
 		margin-bottom: 10px;
 		font-size: 14px;
 		font-family: 'ProximaNovaCond-Semibold', serif;
-		//font-weight: 700;
 	}
 }
 
@@ -332,8 +339,8 @@ body{
 .footer-wrapper{
 	max-width: 960px;
 	margin: auto;
-	@include clearfix;
 	padding: 25px 30px 0 25px;
+	@include clearfix;
 }
 
 .page-footer{
