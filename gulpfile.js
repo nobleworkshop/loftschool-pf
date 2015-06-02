@@ -67,11 +67,9 @@ gulp.task('deploy', function() {
 		.pipe(gulp.dest('./dist/bower_components/jquery/dist/'));
 	gulp.src('./app/img/*')
 		.pipe(gulp.dest('./dist/img/'));
-	gulp.src('./app/icon/*')
-		.pipe(gulp.dest('./dist/icon/'));
 	gulp.src('./app/font/**')
 		.pipe(gulp.dest('./dist/font/'));
-	gulp.src('./app/index.html')
+	gulp.src('./app/*.html')
 		.pipe(gulp.dest('./dist/'));
 
 		

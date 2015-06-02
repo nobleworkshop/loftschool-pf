@@ -1,0 +1,91 @@
+@import 'sprite';
+$general-color: #3ba8c0;
+
+.photo-box{
+	overflow: hidden;
+	float: left;
+	width: 140px;
+	height: 140px;
+	border-radius: 100%;
+	border: 3px solid $general-color;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+.photo-image{
+	position: relative;
+	width: 100%;
+}
+.about-me{
+	width: 400px;
+	float: right;
+	margin-top: -10px;
+	&-item{
+		display: table;
+		border-spacing: 15px 5px;
+	}
+	&-field{
+		display: table-cell;
+		font-weight: bold;
+		white-space:nowrap;
+	}
+	&-value{
+		display: table-cell;
+	}
+}
+
+.skills{
+	&-item{
+		display: inline-block;
+		border-radius: 3px;
+		color: #fff;
+		background-color: $general-color;
+		background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
+		padding: 2px 15px;
+		margin-right: 5px;
+		margin-bottom: 10px;
+		font-size: 14px;
+		font-family: 'ProximaNovaCond-Semibold', serif;
+	}
+}
+
+.work, .education{
+	&-list{
+		margin-left: 55px;
+	}
+	&-item{
+		margin-bottom: 20px;
+	}
+	&-title{
+		margin-bottom: 10px;
+	}
+	&-dates{
+		margin: 0;
+		font-family: 'fira_sanslight', sans-serif;
+	}
+}
+.work{
+	&-item{
+		padding-left: 65px;
+		background-image: url('../img/work.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+}
+.education{
+	&-list{
+		margin-left: 55px;
+	}
+	&-item{
+		padding-left: 65px;
+		background-repeat: no-repeat;
+		background-position: 0 center;
+		&.university{
+			background-image: url('../img/study.png');
+		}
+		&.course{
+			background-image: url('../img/course.png');
+			background-position-x: 10px;
+		}
+	}
+}
+// General END

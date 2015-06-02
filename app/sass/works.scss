@@ -1,0 +1,96 @@
+@import 'sprite';
+$general-color: #3ba8c0;
+
+.works{
+	padding-right: 0;
+
+	&-list{
+		margin-left: 20px;
+	}
+	&-item{
+		float: left;
+		width: 180px;
+		margin-right: 25px;
+		margin-bottom: 40px;
+	}
+	&-link{
+		display: block;
+		text-decoration: none;
+	}
+	&-adress{
+		font-family: 'fira_sanslight_italic', sans-serif;
+		text-align: center;
+		font-size: 13px;
+		margin: 10px;
+		color: $general-color;
+	}
+	&-description{
+		display: block;
+		position: relative;
+		font-size: 15px;
+		height: 3em;
+		overflow: hidden;
+		font-family: 'fira_sanslight', sans-serif;
+		margin: 10px 5px;
+		text-align: center;
+	}
+	&-addLink{
+		display: block;
+		color: $general-color;
+		text-decoration: none;
+		text-align: center;
+		.preview-box{
+			border-style: dashed;
+		}
+	}
+	&-addText{
+		font-size: 13px;
+		font-family: 'fira_sanslight', sans-serif;
+		margin-top: 30px;
+		&:before{
+			display: block;
+			content: '';
+			margin: auto;
+			@include sprite($image);
+		}
+	}
+}
+
+.preview{
+	&-box{
+		width: 100%;
+		height: 125px;
+		border-radius: 4px;
+		border: 1px $general-color solid;
+		position: relative;
+		&:hover{
+			.preview-mask{
+				display: block;
+			}
+		}
+	}
+	&-mask{
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(1, 108, 164, 0.75);
+		text-align: center;
+		line-height: 125px;
+	}
+	&-name{
+		font-size: 12px;
+		color: #fff;
+		border: 1px #fff solid;
+		border-radius: 4px;
+		padding-left: 3px;
+		padding-right: 3px;
+		background-color: $general-color;
+		
+	}
+	&-image{
+		width: 100%;
+	}
+}
