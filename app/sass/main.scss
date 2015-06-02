@@ -90,8 +90,20 @@ body{
 }
 
 .logo{
-	float: left;
+	&-link{
+		display: block;
+		float: left;
+	}
+	&-image{
+		display: block;
+	}
+	&-text{
+		display: block;
+		position: absolute;
+		text-indent: -9999px;
+	}
 }
+
 
 //Social buttons
 .social{

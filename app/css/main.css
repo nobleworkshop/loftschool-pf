@@ -144,8 +144,17 @@ body {
     background-repeat: repeat-y;
     background-size: 100%; }
 
-.logo {
+.logo-link {
+  display: block;
   float: left; }
+
+.logo-image {
+  display: block; }
+
+.logo-text {
+  display: block;
+  position: absolute;
+  text-indent: -9999px; }
 
 .social {
   float: right;
