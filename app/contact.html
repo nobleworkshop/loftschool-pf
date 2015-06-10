@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<title>Ivanov Alexander - Portfolio page</title>
+	<title>Alex page - Контакты</title>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
 	<link rel="stylesheet" href="font/fira/fira.css">
@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/main.css">	
 	<link rel="stylesheet" href="css/contact.css">	
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -73,18 +74,38 @@
 					</ul>
 				</section>
 			</aside>
-			<section class="contact-form info-block">
-				
+			<section class="contact-me info-block">
+				<p class="contact-me-message">У вас интересный проект? Напишите мне</p>
+				<div class="form-wrapper">
+					<form action="" class="contact-me-form">
+						<div class="contact-me-name-box">
+							<label class="contact-me-name-label">Имя</label>
+							<input type="text" class="contact-me-name-input" id="contact-name" placeholder="Как к Вам обращаться" name="name">
+						</div>
+						<div class="contact-me-email-box">
+							<label class="contact-me-email-label">Email</label>
+							<input type="email" class="contact-me-email-input" id="contact-email" placeholder="Куда мне писать" name="email">
+						</div>
+						<label for="" class="contact-me-text-label">Сообщение</label>
+						<textarea class="contact-me-text-input" id="contact-text" cols="30" rows="10" name="message" placeholder="Кратко в чём суть"></textarea>
+						<div class="contact-me-captcha">
+							<div class="g-recaptcha" data-sitekey="6LcyzgcTAAAAAKNA1OrNzrrkO09Lw4I4ZVFUVTzj"></div>
+						</div>
+						<input class="contact-me-submit" type="submit" value="Отправить">
+						<input class="contact-me-reset" type="reset" value="Очистить">
+					</form>
+				</div>
 			</section>
 		</div>
 	</div>
 	<footer class="page-footer">
 		<div class="footer-wrapper">
-			<a href="#" class="login login-lock">Вход</a>
+			<a href="/login.html" class="login login-lock">Вход</a>
 			<p class="copyright">&copy; 2015, Ivanov Alexander</p>
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

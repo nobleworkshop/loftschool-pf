@@ -1,8 +1,5 @@
 @import 'sprite';
-
-$bg-color: #eff3f7;
-$general-color: #3ba8c0;
-$text-color: #4a545d;
+@import 'settings';
 
 @mixin clearfix{
 	&:after, &:before{
@@ -15,14 +12,14 @@ $text-color: #4a545d;
 	}
 }
 
-@include sprites(($social-vk, $social-fb, $social-tw, $social-git, $login-lock));
+@include sprites(($social-vk, $social-fb, $social-tw, $social-git, $login-lock, $close));
 
 html, body{
 	height: 100%;
 	color: $text-color;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6, p{
 	margin: 0;
 	font-weight: normal;
 }
@@ -32,7 +29,16 @@ h3{	font-size: 17px; }
 h4{	font-size: 16px; }
 h5{	font-size: 15px; }
 h6{	font-size: 14px; }
+p{ font-size: 15px; }
 
+/* True headers
+h1{	font-size: 27px; }
+h2{	font-size: 25px; }
+h3{	font-size: 23px; }
+h4{	font-size: 21px; }
+h5{	font-size: 19px; }
+h6{	font-size: 17px; }
+*/
 ul{
 	list-style: none;
 	margin: 0;
@@ -50,11 +56,11 @@ body{
 
 .main-page{ //For sticky footer
 	min-height: 100%;
-	margin-bottom: -80px;
+	margin-bottom: - $size-footer;
 	&:after{
 		display: block;
 		content: "";
-		height: 80px;
+		height: $size-footer;
 	}
 }
 //Wrapper only for general block
@@ -75,7 +81,7 @@ body{
 }
 // Header START
 .page-header{
-	background-color: $bg-color;
+	background-color: $color-lightgrey;
 
 	@include clearfix;
 	
@@ -143,7 +149,7 @@ body{
 	width: 250px;
 }
 .main-menu{
-	background-color: $bg-color;
+	background-color: $color-lightgrey;
 	margin-bottom: 25px;
 	overflow: hidden;
 	border-radius: 4px;
@@ -157,9 +163,9 @@ body{
 		margin-left: 10px;
 		margin-right: 10px;
 		&:hover{
-			color: $general-color;
+			color: $color-extradark;
 		}
-		border-top: 2px solid $general-color;
+		border-top: 2px solid $color-extradark;
 	}
 	//Delimiter for menu items
 	.menu-item:first-child{
@@ -169,7 +175,7 @@ body{
 	}
 
 	.active.menu-item{ 
-		background-color: $general-color;
+		background-color: $color-extradark;
 		.menu-link{
 			font-size: 22px;
 			color: #fff;
@@ -190,7 +196,7 @@ body{
 	border-radius: 4px;
 
 	.title{
-		background-color: $general-color;
+		background-color: $color-extradark;
 		padding: 5px 25px;
 
 	}
@@ -205,19 +211,19 @@ body{
 			content: "";
 		}
 		&-mail{
-			background-color: $general-color*1.1;
+			background-color: $color-dark;
 			&:before{
 				@include sprite($contact-mail);
 			}
 		}
 		&-phone{
-			background-color: $general-color*1.2;
+			background-color: $color-normal;
 			&:before{
 				@include sprite($contact-phone);
 			}
 		}
 		&-skype{
-			background-color: $general-color*1.3;
+			background-color: $color-light;
 			&:before{
 				@include sprite($contact-skype);
 			}
@@ -239,7 +245,7 @@ body{
 //For blocks on page
 .info-block{
 	box-sizing: border-box;
-	background-color: $bg-color;
+	background-color: $color-lightgrey;
 	margin-bottom: 25px;
 	padding-bottom: 15px;
 	padding-right: 35px;
@@ -250,15 +256,58 @@ body{
 
 	.title{
 		display: table;
-		color: $general-color * 1.1;
+		color: $color-extradark;
 		padding: 15px 20px;
-		border-bottom: 2px solid $general-color;
+		border-bottom: 2px solid $color-extradark;
 		margin-right: auto;
 		margin-bottom: 25px;
 	}
+
+}//For forms on page
+
+.input{
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid $color-light;
+	background-color: #fff;
+	color: $color-light;
+	font-size: 13px;
+	border-radius: 4px;
+	outline: none;
+	&::placeholder{
+		color: $color-light;
+	}
 }
-
-
+.textarea{
+	@extend .input;
+	resize: none;
+}
+.btn{
+	padding: 2px 25px;
+	color: #fff;
+	font-size: 19px;
+	border: none;
+	border-radius: 4px;
+	&:hover{
+		box-shadow: none;
+	}
+	box-shadow: 0px -4px 1px -2px $color-extradark inset;
+	background-color: $color-normal;
+	&:active{
+		box-shadow: 0px 4px 1px -2px $color-extradark inset;
+	}
+}
+.btn-grey{
+	@extend .btn;
+	box-shadow: 0px -4px 1px -2px #687b8f inset;
+	background-color: #849db5;
+	float: right;
+	&:active{
+		box-shadow: 0px 4px 1px -2px #687b8f inset;
+	}
+}
 
 //Footer START
 .footer-wrapper{
@@ -270,8 +319,8 @@ body{
 }
 
 .page-footer{
-	background-color: $bg-color;
-	height: 80px;
+	background-color: $color-lightgrey;
+	height: $size-footer;
 	
 	.login{
 		position: absolute;
@@ -283,7 +332,6 @@ body{
 		}
 	}
 	.copyright{
-		margin: 0;
 		font-size: 13px;
 		text-align: center;
 		font-family: 'fira_sanslight', sans-serif;

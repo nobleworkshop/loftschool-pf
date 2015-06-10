@@ -1,0 +1,73 @@
+.form-wrapper {
+  width: 400px;
+  margin: auto; }
+
+.contact-me {
+  padding: 0;
+  margin-bottom: 0; }
+  .contact-me-message {
+    box-sizing: border-box;
+    padding: 50px;
+    margin-bottom: 45px;
+    background-color: #48cbe8;
+    font-size: 27px;
+    color: white;
+    text-align: center;
+    border-bottom: 20px solid #51daf8; }
+  .contact-me-name, .contact-me-email, .contact-me-text {
+    font-family: 'fira_sanslight', sans-serif; }
+    .contact-me-name-label, .contact-me-email-label, .contact-me-text-label {
+      display: block;
+      font-size: 19px;
+      color: #94a8ba; }
+    .contact-me-name-input, .contact-me-email-input, .contact-me-text-input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #51daf8;
+      background-color: #fff;
+      color: #51daf8;
+      font-size: 13px; }
+      .contact-me-name-input::-webkit-input-placeholder, .contact-me-email-input::-webkit-input-placeholder, .contact-me-text-input::-webkit-input-placeholder {
+        color: #51daf8; }
+      .contact-me-name-input::-moz-placeholder, .contact-me-email-input::-moz-placeholder, .contact-me-text-input::-moz-placeholder {
+        color: #51daf8; }
+      .contact-me-name-input:-ms-input-placeholder, .contact-me-email-input:-ms-input-placeholder, .contact-me-text-input:-ms-input-placeholder {
+        color: #51daf8; }
+      .contact-me-name-input::placeholder, .contact-me-email-input::placeholder, .contact-me-text-input::placeholder {
+        color: #51daf8; }
+  .contact-me-name-box {
+    float: left;
+    width: 190px; }
+  .contact-me-email-box {
+    float: right;
+    width: 190px; }
+  .contact-me-text-input {
+    height: 180px; }
+  .contact-me-captcha {
+    margin-bottom: 25px;
+    text-align: right; }
+    .contact-me-captcha .g-recaptcha {
+      display: inline-block; }
+  .contact-me-submit, .contact-me-reset {
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 19px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 40px; }
+    .contact-me-submit:hover, .contact-me-reset:hover {
+      box-shadow: none; }
+  .contact-me-submit {
+    box-shadow: 0px -4px 1px -2px #3ba8c0 inset;
+    background-color: #48cbe8; }
+    .contact-me-submit:active {
+      box-shadow: 0px 4px 1px -2px #3ba8c0 inset; }
+  .contact-me-reset {
+    box-shadow: 0px -4px 1px -2px #687b8f inset;
+    background-color: #849db5;
+    float: right; }
+    .contact-me-reset:active {
+      box-shadow: 0px 4px 1px -2px #687b8f inset; }

@@ -25,7 +25,9 @@ gulp.task('html', function () {
 gulp.task('css', function () {
 	gulp.src('./app/sass/*.scss')
 	    .pipe(sass.sync().on('error', sass.logError))
-		.pipe(autoprefixer())
+		.pipe(autoprefixer({
+			browsers: ['> 1% in RU']
+		}))
 		.pipe(gulp.dest('./app/css/'))
 		.pipe(connect.reload());
 });

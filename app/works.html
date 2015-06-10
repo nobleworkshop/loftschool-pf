@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
-	<title>Ivanov Alexander - Portfolio page</title>
+	<title>Alex page - Работы</title>
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
 	<link rel="stylesheet" href="font/fira/fira.css">
@@ -135,13 +135,33 @@
 			</section>
 		</div>
 	</div>
+	<div class="overlay hidden"></div>
+	<div class="add-project hidden">
+		<div class="add-project-title">Добавление проекта</div>
+		<button class="add-project-close close">Закрыть</button>
+		<form action="" class="add-project-form" method="POST" enctype="multipart/form-data">
+			<label for="project-name" class="add-project-name-label">Название проекта</label>
+			<input type="text" class="add-project-name-input input" placeholder="Введите название" id="project-name" name="name">
+			<label for="project-img" class="add-project-img-label">
+				Картинка проекта
+				<div class="add-project-img-input input">Загрузите изображение</div>
+				<input type="file" class="add-project-img-file" id="project-img" name="img">
+			</label>
+			<label for="project-url" class="add-project-url-label">URL проекта</label>
+			<input type="url" class="add-project-url-input input" id="project-url" placeholder="Добавьте ссылку" name="url">
+			<label for="project-info" class="add-project-description-label">Описание</label>
+			<textarea name="info" id="project-info" cols="30" rows="10" class="add-project-description-textarea textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+			<input type="submit" class="add-project-submit btn" value="Добавить">
+		</form>
+	</div>
 	<footer class="page-footer">
 		<div class="footer-wrapper">
-			<a href="#" class="login login-lock">Вход</a>
+			<a href="/login.html" class="login login-lock">Вход</a>
 			<p class="copyright">&copy; 2015, Ivanov Alexander</p>
 		</div>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+    <script src="js/main.js"></script>
 </body>
 </html>

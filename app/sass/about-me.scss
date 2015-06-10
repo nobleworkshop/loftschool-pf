@@ -1,5 +1,5 @@
 @import 'sprite';
-$general-color: #3ba8c0;
+@import 'settings';
 
 .photo-box{
 	overflow: hidden;
@@ -7,7 +7,7 @@ $general-color: #3ba8c0;
 	width: 140px;
 	height: 140px;
 	border-radius: 100%;
-	border: 3px solid $general-color;
+	border: 3px solid $color-extradark;
 	margin-left: 60px;
 	margin-top: 10px;
 }
@@ -38,8 +38,8 @@ $general-color: #3ba8c0;
 		display: inline-block;
 		border-radius: 3px;
 		color: #fff;
-		background-color: $general-color;
-		background: linear-gradient(to top, $general-color*0.9 50%, $general-color 50%);
+		background-color: $color-extradark;
+		background: linear-gradient(to top, $color-extradark*0.85 50%, $color-extradark 50%);
 		padding: 2px 15px;
 		margin-right: 5px;
 		margin-bottom: 10px;
@@ -59,7 +59,6 @@ $general-color: #3ba8c0;
 		margin-bottom: 10px;
 	}
 	&-dates{
-		margin: 0;
 		font-family: 'fira_sanslight', sans-serif;
 	}
 }

@@ -61,8 +61,7 @@ The `sprites` mixin generates identical output to the CSS template
   border-radius: 3px;
   color: #fff;
   background-color: #3ba8c0;
-  background: -webkit-linear-gradient(bottom, #3597ad 50%, #3ba8c0 50%);
-  background: linear-gradient(to top, #3597ad 50%, #3ba8c0 50%);
+  background: linear-gradient(to top, #328fa3 50%, #3ba8c0 50%);
   padding: 2px 15px;
   margin-right: 5px;
   margin-bottom: 10px;
@@ -79,7 +78,6 @@ The `sprites` mixin generates identical output to the CSS template
   margin-bottom: 10px; }
 
 .work-dates, .education-dates {
-  margin: 0;
   font-family: 'fira_sanslight', sans-serif; }
 
 .work-item {

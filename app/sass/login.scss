@@ -1,0 +1,72 @@
+@import 'settings';
+
+$auth-width: 590px;
+$auth-height: 480px;
+
+.auth-form{
+	padding: 0;
+	position: absolute;
+	width: $auth-width;
+	height: $auth-height;
+	left: 50%;
+	top: 50%;
+	margin-left: -$auth-width/2;
+	margin-top: -$auth-height/2;
+	background-color: $color-lightgrey;
+	border-radius: 4px;
+	box-shadow: 0px 5px 10px 0 $color-grey;
+	overflow: hidden;
+	&-title{
+		box-sizing: border-box;
+		padding: 25px;
+		margin-bottom: 25px;
+		background-color: $color-normal;
+		font-size: 40px;
+		color: #fff;
+		text-align: center;
+		border-bottom: 20px solid $color-light;
+	}
+	&-login, &-pass{
+		font-family: 'fira_sanslight', sans-serif;
+		&-label{
+			display: block;
+			text-align: center;
+			font-size: 36px;
+			color: $color-grey;
+		}
+		&-input{
+			display: block;
+			margin: auto;
+			width: 420px;
+			margin-bottom: 20px;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid $color-light;
+			border-radius: 4px;
+			background-color: #fff;
+			color: $color-light;
+			font-size: 17px;
+			&::placeholder{
+				color: $color-light;
+			}
+		}
+	}
+	&-submit{
+		display: block;
+		margin: auto;
+		padding: 0px 60px;
+		color: #fff;
+		font-size: 36px;
+		border: none;
+		border-radius: 6px;
+		margin-bottom: 40px;
+		box-shadow: 0px -4px 1px -2px $color-extradark inset;
+		background-color: $color-light;
+		&:active{
+			box-shadow: 0px 4px 1px -2px $color-extradark inset;
+		}
+		&:hover{
+			box-shadow: none;
+		}
+	}
+}

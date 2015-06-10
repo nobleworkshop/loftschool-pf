@@ -1,1 +1,94 @@
-$general-color: #3ba8c0;
+@import 'settings';
+
+.form-wrapper{
+	width: 400px;
+	margin: auto;
+}
+
+.contact-me{
+	padding: 0;
+	margin-bottom: 0;
+
+	&-message{
+		box-sizing: border-box;
+		padding: 50px;
+		margin-bottom: 45px;
+		background-color: $color-normal;
+		font-size: 27px;
+		color: white;
+		text-align: center;
+		border-bottom: 20px solid $color-light;
+	}
+	&-name, &-email, &-text{
+		font-family: 'fira_sanslight', sans-serif;
+		&-label{
+			display: block;
+			font-size: 19px;
+			color: $text-color*2;
+		}
+		&-input{
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			padding: 10px;
+			border: 1px solid $color-light;
+			background-color: #fff;
+			color: $color-light;
+			font-size: 13px;
+			&::placeholder{
+				color: $color-light;
+			}
+		}
+	}
+	&-name{
+		&-box{
+			float: left;
+			width: 190px;
+		}
+	}
+	&-email{
+		&-box{
+			float: right;
+			width: 190px;
+		}
+	}
+	&-text{
+		&-input{
+			height: 180px;
+		}
+	}
+	&-captcha{
+		margin-bottom: 25px;
+		text-align: right;
+		.g-recaptcha{
+			display: inline-block;
+		}
+	}
+	&-submit, &-reset{
+		padding: 5px 20px;
+		color: #fff;
+		font-size: 19px;
+		border: none;
+		border-radius: 4px;
+		margin-bottom: 40px;
+		&:hover{
+			box-shadow: none;
+		}
+	}
+	&-submit{
+		box-shadow: 0px -4px 1px -2px $color-extradark inset;
+		background-color: $color-normal;
+		&:active{
+			box-shadow: 0px 4px 1px -2px $color-extradark inset;
+		}
+	}
+	&-reset{
+		box-shadow: 0px -4px 1px -2px #687b8f inset;
+		background-color: #849db5;
+		float: right;
+		&:active{
+			box-shadow: 0px 4px 1px -2px #687b8f inset;
+		}
+	}
+}
