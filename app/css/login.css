@@ -13,52 +13,32 @@
   overflow: hidden; }
   .auth-form-title {
     box-sizing: border-box;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     background-color: #48cbe8;
     font-size: 40px;
     color: #fff;
     text-align: center;
-    border-bottom: 20px solid #51daf8; }
-  .auth-form-login, .auth-form-pass {
-    font-family: 'fira_sanslight', sans-serif; }
-    .auth-form-login-label, .auth-form-pass-label {
-      display: block;
-      text-align: center;
-      font-size: 36px;
-      color: #959aa8; }
-    .auth-form-login-input, .auth-form-pass-input {
-      display: block;
-      margin: auto;
-      width: 420px;
-      margin-bottom: 20px;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 1px solid #51daf8;
-      border-radius: 4px;
-      background-color: #fff;
-      color: #51daf8;
-      font-size: 17px; }
-      .auth-form-login-input::-webkit-input-placeholder, .auth-form-pass-input::-webkit-input-placeholder {
-        color: #51daf8; }
-      .auth-form-login-input::-moz-placeholder, .auth-form-pass-input::-moz-placeholder {
-        color: #51daf8; }
-      .auth-form-login-input:-ms-input-placeholder, .auth-form-pass-input:-ms-input-placeholder {
-        color: #51daf8; }
-      .auth-form-login-input::placeholder, .auth-form-pass-input::placeholder {
-        color: #51daf8; }
-  .auth-form-submit {
+    border-bottom: 15px solid #51daf8; }
+  .auth-form-login-label, .auth-form-pass-label {
+    font-family: 'fira_sanslight', sans-serif;
     display: block;
+    text-align: center;
+    font-size: 36px;
+    color: #959aa8; }
+  .auth-form-login-input, .auth-form-pass-input {
+    font-family: 'fira_sanslight', sans-serif;
+    margin: auto;
+    width: 420px;
+    font-size: 17px;
+    padding: 15px;
+    margin-bottom: 20px; }
+  .auth-form-pass-input {
+    margin-bottom: 30px; }
+  .auth-form-submit {
     margin: auto;
     padding: 0px 60px;
-    color: #fff;
     font-size: 36px;
-    border: none;
     border-radius: 6px;
-    margin-bottom: 40px;
-    box-shadow: 0px -4px 1px -2px #3ba8c0 inset;
-    background-color: #51daf8; }
-    .auth-form-submit:active {
-      box-shadow: 0px 4px 1px -2px #3ba8c0 inset; }
-    .auth-form-submit:hover {
-      box-shadow: none; }
+    margin-bottom: 40px; }

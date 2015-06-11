@@ -11,8 +11,8 @@
 
 	&-message{
 		box-sizing: border-box;
-		padding: 50px;
-		margin-bottom: 45px;
+		padding: 40px 50px;
+		margin-bottom: 35px;
 		background-color: $color-normal;
 		font-size: 27px;
 		color: white;
@@ -24,21 +24,11 @@
 		&-label{
 			display: block;
 			font-size: 19px;
-			color: $text-color*2;
+			color: $color-grey;
 		}
 		&-input{
-			display: block;
+			margin-bottom: 10px;
 			width: 100%;
-			box-sizing: border-box;
-			margin-bottom: 20px;
-			padding: 10px;
-			border: 1px solid $color-light;
-			background-color: #fff;
-			color: $color-light;
-			font-size: 13px;
-			&::placeholder{
-				color: $color-light;
-			}
 		}
 	}
 	&-name{
@@ -65,30 +55,14 @@
 			display: inline-block;
 		}
 	}
-	&-submit, &-reset{
-		padding: 5px 20px;
-		color: #fff;
-		font-size: 19px;
-		border: none;
-		border-radius: 4px;
-		margin-bottom: 40px;
-		&:hover{
-			box-shadow: none;
-		}
-	}
 	&-submit{
-		box-shadow: 0px -4px 1px -2px $color-extradark inset;
-		background-color: $color-normal;
-		&:active{
-			box-shadow: 0px 4px 1px -2px $color-extradark inset;
-		}
+		float: left;
 	}
 	&-reset{
-		box-shadow: 0px -4px 1px -2px #687b8f inset;
-		background-color: #849db5;
 		float: right;
-		&:active{
-			box-shadow: 0px 4px 1px -2px #687b8f inset;
-		}
+	}
+	&-submit, &-reset{
+		font-size: 19px;
+		margin-bottom: 40px;
 	}
 }

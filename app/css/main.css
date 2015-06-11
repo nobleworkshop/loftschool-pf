@@ -206,7 +206,7 @@ body {
   .main-menu .menu-link {
     display: block;
     text-decoration: none;
-    color: #94a8ba;
+    color: #959aa8;
     font-size: 21px;
     padding: 20px 15px;
     margin-left: 10px;
@@ -239,7 +239,7 @@ body {
     .contact-item:before {
       display: block;
       position: absolute;
-      top: 5px;
+      top: 7px;
       left: 40px;
       content: ""; }
     .contact-item-mail {
@@ -313,6 +313,7 @@ body {
   resize: none; }
 
 .btn, .btn-grey {
+  display: block;
   padding: 2px 25px;
   color: #fff;
   font-size: 19px;

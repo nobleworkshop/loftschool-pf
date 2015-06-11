@@ -79,7 +79,7 @@
 					<li class="works-item">
 						<a href="" class="works-link">
 							<div class="preview-box">
-								<img src="" alt="" class="preview-image">
+								<img src="img/project1.jpg" alt="" class="preview-image">
 								<div class="preview-mask">
 									<span class="preview-name">название</span>
 								</div>
@@ -91,7 +91,7 @@
 					<li class="works-item">
 						<a href="" class="works-link">
 							<div class="preview-box">
-								<img src="" alt="" class="preview-image">
+								<img src="img/project2.jpg" alt="" class="preview-image">
 								<div class="preview-mask">
 									<span class="preview-name">название</span>
 								</div>
@@ -103,7 +103,7 @@
 					<li class="works-item">
 						<a href="" class="works-link">
 							<div class="preview-box">
-								<img src="" alt="" class="preview-image">
+								<img src="img/project3.jpg" alt="" class="preview-image">
 								<div class="preview-mask">
 									<span class="preview-name">название</span>
 								</div>
@@ -115,7 +115,7 @@
 					<li class="works-item">
 						<a href="" class="works-link">
 							<div class="preview-box">
-								<img src="" alt="" class="preview-image">
+								<img src="img/project4.jpg" alt="" class="preview-image">
 								<div class="preview-mask">
 									<span class="preview-name">название</span>
 								</div>
@@ -125,7 +125,7 @@
 						<p class="works-description">Информация о проекте 2 строки однознано и ни граммом больше</p>
 					</li>
 					<li class="works-item">
-						<a href="" class="works-addLink">
+						<a href="" class="works-addLink" id="jsAddProject">
 							<div class="preview-box">
 								<p class="works-addText">Добавить проект</p>
 							</div>
@@ -135,24 +135,26 @@
 			</section>
 		</div>
 	</div>
-	<div class="overlay hidden"></div>
-	<div class="add-project hidden">
-		<div class="add-project-title">Добавление проекта</div>
-		<button class="add-project-close close">Закрыть</button>
-		<form action="" class="add-project-form" method="POST" enctype="multipart/form-data">
-			<label for="project-name" class="add-project-name-label">Название проекта</label>
-			<input type="text" class="add-project-name-input input" placeholder="Введите название" id="project-name" name="name">
-			<label for="project-img" class="add-project-img-label">
-				Картинка проекта
-				<div class="add-project-img-input input">Загрузите изображение</div>
-				<input type="file" class="add-project-img-file" id="project-img" name="img">
-			</label>
-			<label for="project-url" class="add-project-url-label">URL проекта</label>
-			<input type="url" class="add-project-url-input input" id="project-url" placeholder="Добавьте ссылку" name="url">
-			<label for="project-info" class="add-project-description-label">Описание</label>
-			<textarea name="info" id="project-info" cols="30" rows="10" class="add-project-description-textarea textarea" placeholder="Пара слов о Вашем проекте"></textarea>
-			<input type="submit" class="add-project-submit btn" value="Добавить">
-		</form>
+	<div id="jsPopup" class="hidden">
+		<div class="overlay jsClosePopup"></div>
+		<div class="add-project">
+			<div class="add-project-title">Добавление проекта</div>
+			<button class="add-project-close close jsClosePopup">Закрыть</button>
+			<form action="" class="add-project-form" method="POST" enctype="multipart/form-data">
+				<label for="project-name" class="add-project-name-label">Название проекта</label>
+				<input type="text" class="add-project-name-input input" placeholder="Введите название" id="project-name" name="name">
+				<label for="project-img" class="add-project-img-label" id="project-img-label">
+					Картинка проекта
+					<div class="add-project-img-input input" id="project-img-overlay">Загрузите изображение</div>
+					<input type="file" class="add-project-img-file" id="project-img" name="img">
+				</label>
+				<label for="project-url" class="add-project-url-label">URL проекта</label>
+				<input type="url" class="add-project-url-input input" id="project-url" placeholder="Добавьте ссылку" name="url">
+				<label for="project-info" class="add-project-description-label">Описание</label>
+				<textarea name="info" id="project-info" cols="30" rows="10" class="add-project-description-textarea textarea" placeholder="Пара слов о Вашем проекте"></textarea>
+				<input type="submit" class="add-project-submit btn" value="Добавить">
+			</form>
+		</div>
 	</div>
 	<footer class="page-footer">
 		<div class="footer-wrapper">
