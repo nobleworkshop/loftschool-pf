@@ -31,9 +31,12 @@ The `sprites` mixin generates identical output to the CSS template
 .works {
   padding-right: 0; }
   .works-list {
-    margin-left: 20px; }
+    margin-left: 20px;
+    font-size: 0; }
   .works-item {
-    float: left;
+    font-size: 1em;
+    vertical-align: top;
+    display: inline-block;
     width: 180px;
     margin-right: 30px;
     margin-bottom: 35px; }
@@ -51,7 +54,6 @@ The `sprites` mixin generates identical output to the CSS template
     position: relative;
     font-size: 15px;
     line-height: 1.2em;
-    height: 2.4em;
     overflow: hidden;
     font-family: 'fira_sanslight', sans-serif;
     margin: 5px;
