@@ -1,4 +1,4 @@
-(function () {
+//(function () {
 	
 	//Placeholders Module
 	var pholder = (function () {
@@ -114,7 +114,7 @@
 				var input = $(this);
 				switch(input.data('validate-type')){
 					case 'text':
-						if(input.val() === '') {
+						if(input.val() === '' || input.val() === input.attr('placeholder')) {
 							_showError(input);
 							valid = false;
 						}
@@ -125,6 +125,7 @@
 							_showError(input);
 							valid = false;
 						}
+						break;
 				}
 			});
 			if(valid === false) {
@@ -192,5 +193,5 @@
 	if (!Modernizr.input.placeholder) {
 		pholder.init();
 	}
-})();
+//})();
 
