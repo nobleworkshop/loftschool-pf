@@ -77,17 +77,17 @@
 			<section class="contact-me info-block">
 				<p class="contact-me-message">У вас интересный проект? Напишите мне</p>
 				<div class="form-wrapper">
-					<form action="" class="contact-me-form">
+					<form action="" class="contact-me-form" method="POST">
 						<div class="contact-me-name-box">
 							<label class="contact-me-name-label">Имя</label>
-							<input type="text" class="contact-me-name-input input" id="contact-name" placeholder="Как к Вам обращаться" name="name">
+							<input type="text" class="contact-me-name-input input" id="contact-name" placeholder="Как к Вам обращаться" name="name" data-tt-text="Вы не ввели имя" data-tt-position="left" data-validate-type="text">
 						</div>
 						<div class="contact-me-email-box">
 							<label class="contact-me-email-label">Email</label>
-							<input type="email" class="contact-me-email-input input" id="contact-email" placeholder="Куда мне писать" name="email">
+							<input type="email" class="contact-me-email-input input" id="contact-email" placeholder="Куда мне писать" name="email" data-tt-text="Вы не ввели email" data-tt-position="right" data-validate-type="text">
 						</div>
 						<label for="" class="contact-me-text-label">Сообщение</label>
-						<textarea class="contact-me-text-input textarea" id="contact-text" cols="30" rows="10" name="message" placeholder="Кратко в чём суть"></textarea>
+						<textarea class="contact-me-text-input textarea" id="contact-text" cols="30" rows="10" name="message" placeholder="Кратко в чём суть" data-tt-text="Ваш вопрос" data-tt-position="left" data-validate-type="text"></textarea>
 						<div class="contact-me-captcha">
 							<div class="g-recaptcha" data-sitekey="6LcyzgcTAAAAAKNA1OrNzrrkO09Lw4I4ZVFUVTzj"></div>
 						</div>

@@ -86,7 +86,7 @@
 							</div>
 							<p class="works-adress">www.site.ru</p>
 						</a>
-						<p class="works-description">Информация о проекте 2 строки однознано и ни граммом больше</p>
+						<p class="works-description">Информация о проекте и ничего не едет</p>
 					</li>
 					<li class="works-item">
 						<a href="" class="works-link">
@@ -98,7 +98,7 @@
 							</div>
 							<p class="works-adress">www.site.ru</p>
 						</a>
-						<p class="works-description">Информация о проекте 2 строки однознано ни граммом больше</p>
+						<p class="works-description">Информация о проекте и ничего не едет</p>
 					</li>
 					<li class="works-item">
 						<a href="" class="works-link">
@@ -110,7 +110,7 @@
 							</div>
 							<p class="works-adress">www.site.ru</p>
 						</a>
-						<p class="works-description">Информация о проекте 2 строки однознано и ни граммом больше</p>
+						<p class="works-description">Информация о проекте и ничего не едет</p>
 					</li>
 					<li class="works-item">
 						<a href="" class="works-link">
@@ -122,7 +122,7 @@
 							</div>
 							<p class="works-adress">www.site.ru</p>
 						</a>
-						<p class="works-description">Информация о проекте 2 строки однознано и ни граммом больше</p>
+						<p class="works-description">Информация о проекте и ничего не едет</p>
 					</li>
 					<li class="works-item">
 						<a href="" class="works-addLink" id="jsAddProject">
@@ -142,17 +142,17 @@
 			<button class="add-project-close close jsClosePopup">Закрыть</button>
 			<form action="" class="add-project-form" method="POST" enctype="multipart/form-data">
 				<label for="project-name" class="add-project-name-label">Название проекта</label>
-				<input type="text" class="add-project-name-input input" placeholder="Введите название" id="project-name" name="name">
+				<input type="text" class="add-project-name-input input" placeholder="Введите название" id="project-name" name="name" data-tt-text="Введите название" data-tt-position="left" data-validate-type="text">
 				<label for="project-img" class="add-project-img-label" id="project-img-label">
 					Картинка проекта
-					<div class="add-project-img-input input" id="project-img-overlay">Загрузите изображение</div>
 					<input type="file" class="add-project-img-file" id="project-img" name="img">
+					<div class="add-project-img-input input" id="project-img-overlay" data-tt-text="изображение" data-tt-position="left" data-validate-type="file-wrapper">Загрузите изображение</div>
 				</label>
 				<label for="project-url" class="add-project-url-label">URL проекта</label>
-				<input type="url" class="add-project-url-input input" id="project-url" placeholder="Добавьте ссылку" name="url">
+				<input type="url" class="add-project-url-input input" id="project-url" placeholder="Добавьте ссылку" name="url" data-tt-text="ссылка на проект" data-tt-position="left" data-validate-type="text">
 				<label for="project-info" class="add-project-description-label">Описание</label>
-				<textarea name="info" id="project-info" cols="30" rows="10" class="add-project-description-textarea textarea" placeholder="Пара слов о Вашем проекте"></textarea>
-				<input type="submit" class="add-project-submit btn" value="Добавить">
+				<textarea name="info" id="project-info" cols="30" rows="10" class="add-project-description-textarea textarea" placeholder="Пара слов о Вашем проекте" data-tt-text="описание проекта" data-tt-position="left" data-validate-type="text"></textarea>
+				<input type="submit" class="add-project-submit btn" value="Добавить" data-tt-text="Введите текст" data-tt-position="left" data-validate-type="text">
 			</form>
 		</div>
 	</div>

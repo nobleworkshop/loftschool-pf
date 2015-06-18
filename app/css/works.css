@@ -184,8 +184,9 @@ The `sprites` mixin generates identical output to the CSS template
       background: #48cbe8 url("../img/upload.png") no-repeat center center;
       cursor: pointer; }
   .add-project-img-file {
+    display: block;
     position: absolute;
-    text-indent: -9999px;
+    left: -9999px;
     opacity: 0;
     filter: alpha(opacity=0); }
   .add-project-img-label {
