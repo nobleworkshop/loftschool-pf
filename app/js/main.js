@@ -32,39 +32,52 @@
 
 	//------------- Tooltip plugin for jQuery ------------------
 	$.fn.tooltip = function (userOptions) {
+		//Если не передаём в функцию объект - создаём 
+		//пустой, чтобы не вывалиться в ошибку
 		if(arguments.length === 0) var userOptions = {};
-		//Id for linking tooltips and inputs
+
+		//Если идентификатор для связки тултипов с инпутами
+		//не определён - задаём.
 		if(arguments.callee.tooltipCounter === undefined){
 			arguments.callee.tooltipCounter = 0;
 		} else {
 			arguments.callee.tooltipCounter++;
 		}
-		var linkId = arguments.callee.tooltipCounter;
-		var object = this;
-		var options = {
-			position: userOptions.position || object.data('tt-position') || 'right',
-			text: userOptions.text || object.data('tt-text') || 'Tooltip'
+
+		var linkId = arguments.callee.tooltipCounter,
+			object = this,
+			tooltip = $('<div class="tooltip-wrapper">\
+						<div class="tooltip"></div>\
+						</div>'),
+			options = {
+			position: userOptions.position 
+					|| object.data('tt-position') 
+					|| 'right',
+			text: 	userOptions.text 
+					|| object.data('tt-text') 
+					|| 'Tooltip'
 		};
-		var tooltip = $('<div class="tooltip-wrapper">\
-												<div class="tooltip"></div>\
-										</div>');
+		//Добавляем тултипу необходимый класс для
+		//для позиционирования и текст
 		tooltip.children().text(options.text);
 		tooltip.children().addClass(options.position);
+
+		//Добавляем уникальный идентификатор для инпута и тултипа
 		tooltip.attr("data-tt-link-id", linkId);
 		object.attr("data-tt-link-id", linkId);
 
-		//Positioning tooltip on page
+		//Функция размещает тултип около нужного инпута
 		function _setPosition(elem, tooltip, position) {
-			var elemWidth = elem.outerWidth();
-			var elemHeight = elem.outerHeight();
-			var elemTopEdge = elem.offset().top;
-			var elemBottomEdge = elem.offset().top + elemHeight;
-			var elemLeftEdge = elem.offset().left;
-			var elemRightEdge = elem.offset().left + elemWidth;
+			var elemWidth = elem.outerWidth(),
+				elemHeight = elem.outerHeight(),
+				elemTopEdge = elem.offset().top,
+				elemBottomEdge = elem.offset().top + elemHeight,
+				elemLeftEdge = elem.offset().left,
+				elemRightEdge = elem.offset().left + elemWidth,
+				tooltipWidth = tooltip.outerWidth(true),
+				tooltipHeight = tooltip.outerHeight(true);
 			
-			var tooltipWidth = tooltip.outerWidth(true);
-			var tooltipHeight = tooltip.outerHeight(true);
-			
+			//Расчитываем координаты в зависимости от позиции
 			if(position === 'right') {
 				tooltip.offset({
 					left: elemRightEdge,
@@ -80,16 +93,15 @@
 				throw new Error("Error tooltip position");
 			}
 		}
-		//Add tooltip to page
+		//Добавляем тултип на страницу и позиционируем
 		$('body').append(tooltip);
 		_setPosition(object, tooltip, options.position);
+		//Мониторим ресайз страницы и перепозиционируем
 		$(window).resize(function() {
 			_setPosition(object, tooltip, options.position);
 		});
 	};
-	$.fn.tooltip.prototype.tooltipCounter = 1;
 	$.fn.tooltipRemove = function() {
-		//var linkId = this.
 		var linkId = this.data('tt-link-id');
 		this.removeData('tt-link-id');
 		$('[data-tt-link-id="' + linkId +'"]').filter('.tooltip-wrapper').remove();
@@ -109,7 +121,9 @@
 		}
 		function _validateForm(event) {
 			var valid = true;
-			_resetValidate();
+			_resetValidate(); //Сбрасываем текущие тултипы
+			//Для каждого инпута в записимости от типа данных
+			//выполняем проверку
 			_inputs.each(function () {
 				var input = $(this);
 				switch(input.data('validate-type')){
