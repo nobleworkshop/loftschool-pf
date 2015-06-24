@@ -36,16 +36,8 @@
 		//пустой, чтобы не вывалиться в ошибку
 		if(arguments.length === 0) var userOptions = {};
 
-		//Если идентификатор для связки тултипов с инпутами
-		//не определён - задаём.
-		if(arguments.callee.tooltipCounter === undefined){
-			arguments.callee.tooltipCounter = 0;
-		} else {
-			arguments.callee.tooltipCounter++;
-		}
-
-		var linkId = arguments.callee.tooltipCounter,
-			object = this,
+		var object = this,
+			func=arguments.callee,
 			tooltip = $('<div class="tooltip-wrapper">\
 						<div class="tooltip"></div>\
 						</div>'),
@@ -62,9 +54,16 @@
 		tooltip.children().text(options.text);
 		tooltip.children().addClass(options.position);
 
+		//Если идентификатор для связки тултипов с инпутами
+		//не определён - задаём.
+		if(func.linkId === undefined){
+			func.linkId = 0;
+		} else {
+			func.linkId++;
+		}
 		//Добавляем уникальный идентификатор для инпута и тултипа
-		tooltip.attr("data-tt-link-id", linkId);
-		object.attr("data-tt-link-id", linkId);
+		tooltip.attr("data-tt-link-id", func.linkId);
+		object.attr("data-tt-link-id", func.linkId);
 
 		//Функция размещает тултип около нужного инпута
 		function _setPosition(elem, tooltip, position) {

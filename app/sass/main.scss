@@ -45,6 +45,8 @@ ul{
 	padding: 0;
 }
 body{
+	position: relative;
+	min-height: 750px;
 	min-width: 980px;
 	background-image: url('../img/bg.png');
 	font-family: 'fira_sansbook', sans-serif;
