@@ -2,7 +2,10 @@
 
 $auth-width: 590px;
 $auth-height: 480px;
-
+.form-wrapper{
+	position: relative;
+	min-height: $auth-height + 100px;
+}
 .auth-form{
 	padding: 0;
 	position: absolute;

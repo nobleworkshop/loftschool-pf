@@ -1,3 +1,7 @@
+.form-wrapper {
+  position: relative;
+  min-height: 580px; }
+
 .auth-form {
   padding: 0;
   position: absolute;
